@@ -1,15 +1,13 @@
 # AWSLabs
 Learning and documenting how to use AWS
 
+There is two ways to complete most if not all the actions here. The first time I go through my learning, I will be doing it through the console. I eventually plan to go back through all the steps and to automate everything using the CLI option. I haven't decided if I want to do this after each step or at the end of everything.
+
 ## Account Basics
 
 #### IAM Users
 
 Creating IAM users are important as it allows you to have multiple users using your AWS account without giving your own account details. Additionally, creating an IAM user for yourself is best practice as this adds a bit more security so that if the root account gets comprimised, you won't "lose" much.
-
-The 2 main ways of creating an IAM user is to either use the console (web browser) or to use the CLI through some sort of OS. I decided to cover the creation of the user through the console.
-
-*NOTE: The CLI portion of this will be completed when I go back through this document and automate everything.*
 
 1) Sign into the AWS Console and go to the IAM Console.
 2) Choose Users -> Add User.
