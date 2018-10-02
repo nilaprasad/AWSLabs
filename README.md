@@ -1,7 +1,7 @@
 # AWSLabs
 Learning and documenting how to use AWS
 
-There is two ways to complete most if not all the actions here. The first time I go through my learning, I will be doing it through the console. I eventually plan to go back through all the steps and to automate everything using the CLI option. I haven't decided if I want to do this after each step or at the end of everything.
+There is two ways to complete most if not all the actions here. The first time I go through my learning, I will be doing it through the console. I eventually plan to go back through all the steps and to automate everything. I haven't decided if I want to do this after each step or at the end of everything.
 
 ## Account Basics
 
@@ -38,7 +38,7 @@ Setting up billing alerts is really important as you do not want to go over your
 
 #### AWS CLI Setup
 
-While I did mention that I will try to automate everything with the CLI at a later date, I might as well setup the this portion now and have it ready to go on my computer. The CLI provides direct access to the AWS public API which allows for exploring of service capabilities and develop scripts to manage resources. There is more to the CLI than this, but this is all I'm concerned about.
+The CLI provides direct access to the AWS public API which allows for exploring of service capabilities and develop scripts to manage resources. There is more to the CLI than this, but this is all I'm concerned about.
 
 In order to get started, I downloaded the MSI installer directly and simply ran the installation. The MSI installed the commands/tools I need for AWS as well as Python. The installation can be verified by running "aws --version". If needed, add the installation path as an environment variable.
 
@@ -48,7 +48,7 @@ In order to get started, I downloaded the MSI installer directly and simply ran 
 4) Select Add and point where the AWS CLI installation was done. In my case, it was C:\Program Files\Amazon\AWSCLI.
 5) Click on OK to finish up the changes.
   
-The AWS CLI should now be properly set up. I will come back to this tool when it's time to automate everything.
+The AWS CLI should now be properly set up. No more logging into the console! (Not really... I'm still going to be using it for the rest of my learning.
 
 ## Web Hosting/EC2 Basics
 
