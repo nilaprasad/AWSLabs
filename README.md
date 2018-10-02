@@ -67,8 +67,11 @@ At this point you need to set up a key pair or use an existing one. The steps he
 As most companies/corporations use Apache, I will be installing a LAMP stack on the Linux image I deployed earlier. 
 
 > sudo yum update -y
+
 > sudo yum install -y httpd24 php70 mysql56-server php70-mysqlnd
+
 > sudo service httpd start
+
 > sudo chkconfig httpd on
 
 A security rule will be needed on the EC2 instance to allow HTTP traffic.
