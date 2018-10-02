@@ -40,4 +40,28 @@ Setting up billing alerts is really important as you do not want to go over your
 
 While I did mention that I will try to automate everything with the CLI at a later date, I might as well setup the this portion now and have it ready to go on my computer. The CLI provides direct access to the AWS public API which allows for exploring of service capabilities and develop scripts to manage resources. There is more to the CLI than this, but this is all I'm concerned about.
 
-In order to get started, I downloaded the MSI installer directly and simply ran the installation.
+In order to get started, I downloaded the MSI installer directly and simply ran the installation. The MSI installed the commands/tools I need for AWS as well as Python. The installation can be verified by running "aws --version". If needed, add the installation path as an environment variable.
+
+1) Search for Environment Viarables on your computer.
+2) Select Edit the system environment variables.
+3) Select PATH from under User variables for <user> and click Edit.
+4) Select Add and point where the AWS CLI installation was done. In my case, it was C:\Program Files\Amazon\AWSCLI.
+5) Click on OK to finish up the changes.
+  
+The AWS CLI should now be properly set up. I will come back to this tool when it's time to automate everything.
+
+## Web Hosting/EC2 Basics
+
+## Auto Scaling
+
+## External Data/Working with Databases
+
+## Web Hosting PaaS
+
+## Microservices
+
+## Serverless
+
+## Automation
+
+## Continuous Delivery
