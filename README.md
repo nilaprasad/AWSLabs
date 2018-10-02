@@ -52,6 +52,42 @@ The AWS CLI should now be properly set up. No more logging into the console! (No
 
 ## Web Hosting/EC2 Basics
 
+#### Deploying an EC2 Instance
+
+Now comes the fun part, actually spinning up a virtual OS instance. AWS offers a variety of Linux and Windows OS each with its own requirements and cost. As this entire lab is going to be completed on the free tier, I will be using to Amazon Linux AMI.
+
+1) Sign into the AWS console and go to the Amazon EC2 Dashboard.
+2) Select Launch Instance and choose the Amazon Linux AMI image.
+3) Now, the instance type needs to be selecte. I will be using t2.micro as this is free-tier eligible.
+4) Click on Review and Launch as all the other setup details can be left as default.
+5) You should be on the Review Instance Launch page. Click Launch.
+
+At this point you need to set up a key pair or use an existing one. The steps here are pretty straight-forward so I won't be going through them, but I did end up having to create a pair for myself so that I can log in. This key pair will be used to connect via a web browser or through an app like PuTTY. Once connected, I will be able to setup a web server to host a simple web page.
+
+As most companies/corporations use Apache, I will be installing a LAMP stack on the Linux image I deployed earlier. 
+
+> sudo yum update -y
+> sudo yum install -y httpd24 php70 mysql56-server php70-mysqlnd
+> sudo service httpd start
+> sudo chkconfig httpd on
+
+A security rule will be needed on the EC2 instance to allow HTTP traffic.
+
+1) Sign into the AWS console and go to the EC2 instance that was launched.
+2) Under Security Groups select View Inbound Rules.
+3) Click on Add Rule and follow the chart:
+    Type: HTTP
+    Protocol: TCP
+    Port Range: 80
+    Source: Custom
+4) Click on Save.
+
+A test web page should now be accessible via the server's IP address. A new web page can be added via the /var/www/html path for Apache. As this is simply a test web page, I won't be setting up SSL/TLS.
+
+#### Backup/Restore
+
+
+
 ## Auto Scaling
 
 ## External Data/Working with Databases
