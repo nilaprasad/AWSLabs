@@ -23,4 +23,19 @@ The new user is now setup and ready to be used.
 The next step is securing the root user for AWS. The method I will be using is a virtual type of authentication with Google Authenticator. While hardware type authentication is more secure, I did not have access to any FOB. If access to an authenticator is lost, the AWS support team can be contacted for further steps.
 
 1) Sign into the AWS Console, choose Dashboard -> Security Status -> Activate MFA on your root user.
-2) 
+2) Select Activate MFA and then continue.
+3) Select Virtual MFA Device and then continue. At this point the you should have a virtual MFA app installed on your phone.
+4) The easiest way to setup MFA on your phone is to scan the QR Code on screen with your phone. You will need to enter 2 separate MFA codes.
+5) Select Assign MFA and then Finish.
+
+MFA is now setup on the root user for AWS. The same thing can be done with a regular IAM user.
+
+#### Billing Alerts
+
+Setting up billing alerts is really important as you do not want to go over your budget or exceed costs in general. Having an alert will notify you of approaching usage limits, I've gotten plenty of these just learning all this, as well as potential costs. I won't be going over the procedures as this is almost a one time thing when you have everything set up. Under the Billing and Cost Management Console, you are able to check, create and delete billing alerts from here.
+
+##### Nila's notes: I probably won't be adding steps anymore on how to do things as this can easily be found on the AWS Help/User Guide. I will try to make each topic from my point of view as I do it along with anything I observe.
+
+#### AWS CLI Setup
+
+While I did mention that I will try to automate everything with the CLI at a later date, I might as well setup the this portion now and have it ready to go on my computer.
