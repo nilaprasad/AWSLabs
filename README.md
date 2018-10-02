@@ -30,12 +30,14 @@ The next step is securing the root user for AWS. The method I will be using is a
 
 MFA is now setup on the root user for AWS. The same thing can be done with a regular IAM user.
 
+##### Note: For the next sub-section, I won't be providing steps as it's more simple to just look it up in the AWS user guide. I will add this note whenever I'm going to skip the steps portion.
+
 #### Billing Alerts
 
 Setting up billing alerts is really important as you do not want to go over your budget or exceed costs in general. Having an alert will notify you of approaching usage limits, I've gotten plenty of these just learning all this, as well as potential costs. I won't be going over the procedures as this is almost a one time thing when you have everything set up. Under the Billing and Cost Management Console, you are able to check, create and delete billing alerts from here.
 
-##### Nila's notes: I probably won't be adding steps anymore on how to do things as this can easily be found on the AWS Help/User Guide. I will try to make each topic from my point of view as I do it along with anything I observe.
-
 #### AWS CLI Setup
 
-While I did mention that I will try to automate everything with the CLI at a later date, I might as well setup the this portion now and have it ready to go on my computer.
+While I did mention that I will try to automate everything with the CLI at a later date, I might as well setup the this portion now and have it ready to go on my computer. The CLI provides direct access to the AWS public API which allows for exploring of service capabilities and develop scripts to manage resources. There is more to the CLI than this, but this is all I'm concerned about.
+
+In order to get started, I downloaded the MSI installer directly and simply ran the installation.
