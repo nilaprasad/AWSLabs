@@ -89,7 +89,30 @@ A test web page should now be accessible via the server's IP address. A new web 
 
 #### Backup/Restore
 
+The next part to test is if a backup and restore of my EC2 instance will work. Backing up/restoring is really important because if there is some sort of issue or some (big) compatability issue and you can't figure out how to fix it, restoring to a certain point is really easy. I will actually be testing that I can restore my EC2 instance because technically the restore doesn't exist if it doesn't actually work (thank you Reddit!).
 
+1) Sign into the AWS console and go to the EC2 instance dashboard.
+2) Select the EC2 instance that's going to be backed up.
+3) Scroll down to the Description section at the bottom.
+4) Click on the heading that says Root device and then click on the value of the EBS ID (vol-xxxxxx).
+5) The volume showing up on this dashboard belongs to the EC2 instance created. Select it, if it's not already selected, and click on Actions -> Create Snapshot.
+6) Enter a name and description, I used "Test Snapshot" and "Test Snapshot for restore".
+
+At this point, a snapshot of the root device has been created. This is the most important piece needed in the restoration process. I tested the restore and the LAMP stack I set up in my initial instance carried over correctly onto that second one.
+
+1) Under the EC2 instance dashboard, go to the Snapshot section.
+2) Select the snapshot created in the above steps and go to Actions -> Create Volume.
+3) Everything on this screen can be left as is. If the availability zone was changed for the instance, change it on this screen to match the instance zone.
+4) Click Create.
+
+Now that a volume has been created, another instance can be created and the newly created volume can be attached. I had to stop the instance in order to attach the volume.
+
+1) After the instance has been stopped, go to the Volumes section and detach the volume that is already there.
+2) Refresh the page, highlight the new volume and then click on Actions -> Attach Volume.
+3) Select the newly created instance in order to attach the volume.
+4) Click Attach.
+
+The newly created instance is now the exact same as the first created instance. This can be verified by logging into the second instance. For me, the Apache server was still present (of course I had to reopen the HTTP port).
 
 ## Auto Scaling
 
